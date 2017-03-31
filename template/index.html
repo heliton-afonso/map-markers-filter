@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+  <title>Naviraí - O zebu do Brasil</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="col-sm-4 col-md-3">
+        &nbsp;
+      </div>
+
+      <div class="col-sm-8 col-md-9">
+        <form class="form form-search">
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="form-group">
+              <div class="input-group field">
+                <input type="search" name="client_name" id="client_name" class="form-control" placeholder="BUSCAR PELO CLIENTE" />
+                <span class="input-group-addon">
+                  <button type="button" name="btn-search" class="btn-search">
+                    <img src="../images/ico-buscar.png" alt="Buscar" title="Buscar" />
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-sm-7">
+            <div class="row">
+              <div class="col-md-6">
+                <label for="type" class="lb-show">EXIBIR:</label>
+                <select name="type" id="type" class="form-control field">
+                  <option value="todos">TODOS</option>
+                  <option value="semem">SEMEM</option>
+                  <option value="zebu">ZEBU</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label class="checkbox-inline">
+                  <input type="checkbox" name="red" value="red" class="form-control chk-color" checked="checked" />
+                  <span class="label-marker bg-red">&nbsp;</span>
+                </label>
+
+                <label class="checkbox-inline">
+                  <input type="checkbox" name="yellow" value="yellow" class="form-control chk-color" checked="checked" />
+                  <span class="label-marker bg-yellow">&nbsp;</span>
+                </label>
+
+                <label class="checkbox-inline">
+                  <input type="checkbox" name="green" value="green" class="form-control chk-color" checked="checked" />
+                  <span class="label-marker bg-dark-green">&nbsp;</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div id="map" class="map"></div>
+  </main>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3q5v8aLXYlOIVq04P5aIEq-r1Sb9kxzY&callback=initMap" async defer></script>
+  <script src="../js/map.js"></script>
+
+</body>
+</html>
